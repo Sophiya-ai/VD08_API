@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Случайная цитата</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- bootstrap.min.css - оптимизированная для производительности минифицированная версия CSS-файла Bootstrap.
+        Ее использование ускоряет загрузку страниц -->
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Цитата:</h5>
+                <blockquote class="blockquote mb-0">
+                    <p>{{ quote }}</p>
+                    <footer class="blockquote-footer">{{ author }}</footer>
+                </blockquote>
+            </div>
+        </div>
+         <a class="btn btn-primary mt-3" href="/">Получить новую цитату</a>
+    </div>
+</body>
+</html>
