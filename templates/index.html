@@ -30,6 +30,18 @@
       </div>
     {% endif %}
   </div>
+
+  <div class="result">
+        {% if news %}
+          <h2>Новости</h2>
+          <ul>
+            {% for article in news %}
+            <!-- вставляем ссылку на новость, чтобы можно было кликнуть -->
+              <li> <a href="{{ article['url'] }}"> {{ article['title'] }} </a> </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+  </div>
 </div>
 
 <!-- Подключаем Bootstrap JS и jQuery -->
